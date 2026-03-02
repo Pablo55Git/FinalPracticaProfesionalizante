@@ -1,0 +1,179 @@
+:root {
+    --naranja: #ff8c00;
+    --negro: #000000;
+    --gris-card: #121212;
+    --serif: 'Georgia', serif;
+    --sans: 'Arial', sans-serif;
+}
+h2{
+    text-align: center;
+}
+body {
+    background-color: var(--negro);
+    color: white;
+    font-family: var(--sans);
+    margin: 0;
+}
+
+/* Header Estilo Mercado Libre */
+.main-header {
+    background-color: var(--negro);
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--naranja);
+}
+
+.logo { font-size: 2rem; font-family: var(--serif); font-weight: bold; }
+.logo span { color: var(--naranja); }
+
+/* Banner Foto Amplia */
+.hero-banner { position: relative; height: 500px; overflow: hidden; }
+.banner-img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6); }
+.banner-text { position: absolute; top: 50%; left: 10%; transform: translateY(-50%); }
+
+/* Grid tipo Mercado Libre */
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+.card {
+    background-color: var(--gris-card);
+    border-radius: 8px;
+    padding: 15px;
+    transition: transform 0.3s ease; /* Transición sutil [cite: 38] */
+    border: 1px solid #333;
+}
+
+.card:hover { transform: scale(1.05); border-color: var(--naranja); } /* Efecto rimbombante */
+
+.card img { width: 100%; border-radius: 4px; }
+.precio { color: var(--naranja); font-size: 1.5rem; font-weight: bold; }
+
+button {
+    background-color: var(--naranja);
+    border: none;
+    padding: 10px;
+    width: 100%;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Diseño Responsivo [cite: 33, 34] */
+@media (max-width: 768px) {
+    .banner-text h1 { font-size: 1.8rem; }
+    .grid-productos { grid-template-columns: 1fr; }
+}
+.image-container {
+    width: 100%;
+    height: 250px; /* Altura fija para mantener la simetría tipo Mercado Libre [cite: 61] */
+    overflow: hidden;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    background-color: #000;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Hace que la foto llene el espacio sin deformarse  */
+    transition: transform 0.5s ease;
+}
+
+.card:hover .image-container img {
+    transform: scale(1.1); /* Efecto zoom rimbombante al pasar el mouse  */
+}
+
+/* Estilos para la tabla en la página secundaria */
+#tabla-gestion {
+    width: 90%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background-color: var(--gris-card);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#tabla-gestion th {
+    background-color: var(--naranja);
+    color: var(--negro);
+    padding: 15px;
+    text-transform: uppercase;
+    font-family: var(--serif);
+}
+
+#tabla-gestion td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+/* Botón de eliminar rimbombante */
+.btn-del, .btn-eliminar-pro {
+    background-color: #ff4b2b; /* Color de advertencia */
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn-del:hover {
+    background-color: #d43f21;
+}
+
+.balance-card {
+    text-align: center;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 400px;
+    background-color: var(--gris-card);
+    border: 2px solid var(--naranja);
+    border-radius: 12px;
+    box-shadow: 0 0 15px var(--naranja); /* Resaltado rimbombante */
+}
+
+.balance-card h3 {
+    margin: 0;
+    font-family: var(--serif);
+}
+
+#total-val, #total-precio {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--naranja);
+    margin: 10px 0;
+}
+
+#cart-count {
+    color: var(--naranja);
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: transform 0.2s ease; /* Para la animación de escala */
+    display: inline-block;
+}
+
+.nav-cart {
+    text-decoration: none;
+    color: white;
+    background: #222;
+    padding: 10px 15px;
+    border-radius: 50px;
+    border: 1px solid var(--naranja);
+    transition: 0.3s;
+}
+
+.nav-cart:hover {
+    background: var(--naranja);
+    color: black;
+}
+
+.nav-cart:hover #cart-count {
+    color: black;
+}

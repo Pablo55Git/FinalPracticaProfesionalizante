@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tu Carrito | Gestión Pablo Orange</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">TU<span>CARRITO</span></div>
+        <a href="index.html" style="color: var(--naranja);">← Continuar Comprando</a>
+    </header>
+
+    <main class="container">
+        <article class="balance-card">
+            <h3>Total de tu Compra</h3>
+            <p id="total-val" class="resultado-positivo">$0</p>
+        </article>
+
+        <table id="tabla-gestion">
+            <thead>
+                <tr>
+                    <th>Instrumento</th>
+                    <th>Precio</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody id="cart-body"></tbody>
+        </table>
+    </main>
+
+    <script src="cart-logic.js"></script>
+</body>
+</html>

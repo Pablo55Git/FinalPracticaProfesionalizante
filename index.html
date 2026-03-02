@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pablo Orange | Tienda Oficial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+    <div class="logo">PABLO<span>ORANGE</span></div>
+    <nav>
+        <a href="carrito.html" class="nav-cart">
+            🛒 <span class="cart-text">Carrito</span> 
+            (<span id="cart-count">0</span>)
+        </a>
+    </nav>
+</header>
+
+    <main>
+        <section class="hero-banner">
+            <img src="https://www.elfinanciero.com.mx/resizer/v2/IEUM66UOW5ET3LSESPXRUULXU4.jpg?smart=true&auth=1c0e9bf6d6606171e336dae80077a73d62057f9666a46150df89c6ab7f405500&width=1200&height=675&quality=85" alt="Estudio de Grabación" class="banner-img">
+            <div class="banner-text">
+                <h1>Sonido de Élite</h1>
+                <p>Explora nuestra selección exclusiva de instrumentos profesionales.</p>
+            </div>
+        </section>
+
+        <section class="product-gallery">
+            <h2>Instrumentos Destacados</h2>
+            <div class="grid-productos">
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1525201548942-d8732f6617a0?w=300" alt="Guitarra Eléctrica">
+                    <h3>Guitarra Fender Acústica</h3>
+                    <p class="precio">$ 1.250.000</p>
+                    <button type="button" onclick="agregarAlCarrito('Fender Acústica', 1250000)">Añadir al Carrito</button>
+                </article>
+
+                <article class="card">
+                    <img src="https://musicalcedar.com/wp-content/uploads/2024/06/Teclado-roland-E-x30-Musical-Cedar-2024.png" alt="Piano Digital">
+                    <h3>Piano Roland RD-2000</h3>
+                    <p class="precio">$ 2.800.000</p>
+                    <button type="button" onclick="agregarAlCarrito('Roland RD-2000', 2800000)">Añadir al Carrito</button>
+                </article>
+
+                <article class="card">
+                    <img src="https://cdn-blog.superprof.com/blog_es/wp-content/uploads/2020/03/primeros-bajos-electricos.jpg.webp" alt="Bajo Fender Precision Bass">
+                    <h3>Fender Precision Bass</h3>
+                    <p class="precio">$ 980.000</p>
+                    <button type="button" onclick="agregarAlCarrito('Precision Bass', 980000)">Añadir al Carrito</button>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Pablo Orange - Mendoza, Argentina</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
